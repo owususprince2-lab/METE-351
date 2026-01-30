@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>METE 151 Quiz</title>
+    <title>CENG 291 Quiz</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -47,6 +47,7 @@
 
       const QuizApp = () => {
         const [view, setView] = useState("start");
+        const [department, setDepartment] = useState("");
         const [studentName, setStudentName] = useState("");
         const [indexNumber, setIndexNumber] = useState("");
         const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -59,189 +60,129 @@
 
         const questions = [
           {
-            id: 11,
+            id: 1,
             type: "mcq",
-            question: "Metallurgy combines principles from which three scientific fields to improve metal properties?",
+            question: "Which option best distinguishes ethics from morality as presented in the lecture?",
             options: [
-              "Biology, Geology, and Physics",
-              "Chemistry, Physics, and Materials Science",
-              "Engineering, Math, and History",
-              "Economics, Sociology, and Chemistry",
+              "Ethics are personal beliefs, while morality is legally enforced",
+              "Ethics are external and formal, while morality is individual and cultural",
+              "Ethics focus on punishment, while morality focuses on education",
+              "Ethics are universal customs, while morality depends on professional codes",
             ],
-            correctAnswer: "Chemistry, Physics, and Materials Science",
+            correctAnswer: "Ethics are external and formal, while morality is individual and cultural",
           },
           {
-            id: 12,
+            id: 2,
             type: "mcq",
-            question: "Why was the discovery of Bronze a significant technological advancement?",
+            question: "Which of the following is classified as ethical but illegal according to the lecture?",
             options: [
-              "It was easier to find than copper.",
-              "It allowed for stronger tools and weapons compared to pure copper.",
-              "It was used primarily for currency rather than tools.",
-              "It prevented the need for heat during the shaping process.",
+              "Designing a bridge with excess safety factor",
+              "Parking illegally to assist an injured person",
+              "Owning slaves before the US civil war",
+              "Copying office supplies from work",
             ],
-            correctAnswer: "It allowed for stronger tools and weapons compared to pure copper.",
+            correctAnswer: "Parking illegally to assist an injured person",
           },
           {
-            id: 13,
+            id: 3,
             type: "mcq",
-            question: "Which extractive process specifically involves the use of fire to reduce ore into metal?",
+            question: "According to the lecture, laws differ from ethics primarily because laws:",
             options: [
-              "Hydrometallurgy",
-              "Electrometallurgy",
-              "Mineral Processing",
-              "Pyrometallurgy",
+              "Are optional moral guidelines",
+              "Are enforced by social approval",
+              "Are binding and formally enforced",
+              "Apply universally regardless of country",
             ],
-            correctAnswer: "Pyrometallurgy",
+            correctAnswer: "Are binding and formally enforced",
           },
           {
-            id: 14,
+            id: 4,
             type: "mcq",
-            question: 'In traditional Ghanaian metallurgy, "Lost-wax casting" was used to create:',
+            question: "Which statement best reflects engineering ethics as defined in the lecture?",
             options: [
-              "Large scale industrial pipes",
-              "Intricate gold jewelry and bronze figurines",
-              "Wrought iron bridges",
-              "Reinforced steel bars",
+              "Applying legal rules to engineering design",
+              "Maximizing profit while avoiding litigation",
+              "Understanding, resolving, and justifying moral issues in engineering",
+              "Following company policies during engineering practice",
             ],
-            correctAnswer: "Intricate gold jewelry and bronze figurines",
+            correctAnswer: "Understanding, resolving, and justifying moral issues in engineering",
           },
           {
-            id: 15,
+            id: 5,
             type: "mcq",
-            question: "The primary purpose of using superalloys in the aerospace industry is to:",
+            question: 'In moral reasoning, a design that "meets specifications" is said to have:',
             options: [
-              "Reduce the weight of the aircraft frame.",
-              "Enhance engine performance and heat resistance.",
-              "Provide better electrical conductivity.",
-              "Lower the cost of manufacturing.",
+              "Legal validity only",
+              "Technical value with no moral relevance",
+              "Technical value that also contains moral content",
+              "Ethical approval independent of consequences",
             ],
-            correctAnswer: "Enhance engine performance and heat resistance.",
+            correctAnswer: "Technical value that also contains moral content",
           },
           {
-            id: 31,
+            id: 6,
             type: "mcq",
-            question: 'Compare the impact of the "Chalcolithic" and "Bronze Age" on ancient civilizations. The most significant difference was:',
+            question: "Which factor is identified as a primary cause of engineering disasters?",
             options: [
-              "The Chalcolithic used only iron, while the Bronze Age used only gold.",
-              "The Bronze Age introduced alloys, which revolutionized societal structures and warfare.",
-              "The Chalcolithic era required higher temperatures than the Bronze Age.",
-              "The Bronze Age relied entirely on cold hammering native metals.",
+              "Natural disasters alone",
+              "Ethical failures and human factors",
+              "Advanced technology use",
+              "Excessive safety margins",
             ],
-            correctAnswer: "The Bronze Age introduced alloys, which revolutionized societal structures and warfare.",
+            correctAnswer: "Ethical failures and human factors",
           },
           {
-            id: 32,
+            id: 7,
             type: "mcq",
-            question: 'Evaluate the role of "Galamsey" in the context of Ghanaian metallurgy. How do metallurgists help address this challenge?',
+            question: "From the lecture, materials failure in engineering disasters is described as:",
             options: [
-              "By increasing the mining of gold.",
-              "By developing sustainable mining practices and improving water management systems.",
-              "By banning the use of all metals in local communities.",
-              "By promoting the use of ancient primitive smelting techniques.",
+              "Random and unavoidable",
+              "Mostly due to external environmental forces",
+              "Often preventable through ethical engineering decisions",
+              "Independent of metallurgical engineering choices",
             ],
-            correctAnswer: "By developing sustainable mining practices and improving water management systems.",
+            correctAnswer: "Often preventable through ethical engineering decisions",
           },
           {
-            id: 33,
+            id: 8,
             type: "mcq",
-            question: 'Synthesizing the role of metallurgy in modern technology, which statement best describes its role in "Renewable Energy"?',
+            question: "An ethical materials or metallurgical engineer is expected to do all EXCEPT:",
             options: [
-              "It is only used to build the frames of solar panels.",
-              "It provides advanced materials essential for turbines and conductive elements.",
-              "It is largely irrelevant as renewable energy uses non-metallic materials.",
-              "It is used to extract fossil fuels more efficiently.",
+              "Avoid conflicts of interest",
+              "Accept work beyond their expertise",
+              "Act in the best interest of society",
+              "Fulfill contractual obligations professionally",
             ],
-            correctAnswer: "It provides advanced materials essential for turbines and conductive elements.",
+            correctAnswer: "Accept work beyond their expertise",
           },
           {
-            id: 34,
+            id: 9,
             type: "mcq",
-            question: 'How did the "Colonial Era" change the trajectory of metallurgy in Ghana compared to the "Pre-Colonial Era"?',
+            question: "Why are codes of engineering ethics limited, according to the lecture?",
             options: [
-              "It introduced primitive methods of gold mining.",
-              "It established large-scale, modern mining and metallurgical techniques.",
-              "It led to the decline of gold mining in favor of agriculture.",
-              "It returned the region to Stone Age technologies.",
+              "They are legally binding",
+              "They provide precise answers to all cases",
+              "They contain vague language and conflicting principles",
+              "They replace moral judgment entirely",
             ],
-            correctAnswer: "It established large-scale, modern mining and metallurgical techniques.",
+            correctAnswer: "They contain vague language and conflicting principles",
           },
           {
-            id: 35,
+            id: 10,
             type: "mcq",
-            question: 'Based on the sources, what is the most likely reason "Wootz steel" was historically significant?',
+            question: "Which is identified as the number-one ethical decision question engineers should ask themselves?",
             options: [
-              "It was the first form of native iron found.",
-              "It represented early steel production through carburization processes.",
-              "It was used solely for Kente weights.",
-              "It could only be shaped using cold hammering.",
+              "Is it legal?",
+              "Is it safe?",
+              "Does it maximize profit?",
+              "Would I do this in front of my mother?",
             ],
-            correctAnswer: "It represented early steel production through carburization processes.",
-          },
-          {
-            id: 36,
-            type: "mcq",
-            question: 'Analyze the relationship between "Physical Metallurgy" and "Aerospace Engineering."',
-            options: [
-              "Physical metallurgy is not used in aerospace.",
-              "Aerospace requires an understanding of metal properties (Physical Metallurgy) to create superalloys.",
-              "Aerospace only uses extractive metallurgy to get metals.",
-              "Aerospace focuses on the chemistry of ores rather than the performance of the final metal.",
-            ],
-            correctAnswer: "Aerospace requires an understanding of metal properties (Physical Metallurgy) to create superalloys.",
-          },
-          {
-            id: 37,
-            type: "mcq",
-            question: "Assess the impact of privatization in the 1980s and 90s on Ghana's mining industry.",
-            options: [
-              "It led to the closure of all state-owned mines.",
-              "It attracted foreign investment and led to the establishment of new mines.",
-              "It halted the production of bauxite and manganese.",
-              "It forced the industry to return to lost-wax casting methods.",
-            ],
-            correctAnswer: "It attracted foreign investment and led to the establishment of new mines.",
-          },
-          {
-            id: 38,
-            type: "mcq",
-            question: "Which of the following describes the synthesis of chemistry and physics in the field of Metallurgy?",
-            options: [
-              "Using biology to study the age of artifacts.",
-              "Understanding how atomic structures and chemical reactions influence metal production and performance.",
-              "Focusing purely on the economic value of metal exports.",
-              "Studying only the historical dates of the Iron Age.",
-            ],
-            correctAnswer: "Understanding how atomic structures and chemical reactions influence metal production and performance.",
-          },
-          {
-            id: 39,
-            type: "mcq",
-            question: 'How did the discovery of "smelting" change human history during the Stone-to-Copper transition?',
-            options: [
-              "It allowed humans to find gold for the first time.",
-              "It enabled the extraction of metal from ore using heat, moving beyond native metal usage.",
-              "It decreased the need for fire in industrial processes.",
-              "It made tools softer and more decorative.",
-            ],
-            correctAnswer: "It enabled the extraction of metal from ore using heat, moving beyond native metal usage.",
-          },
-          {
-            id: 40,
-            type: "mcq",
-            question: "Evaluate the scope of Metallurgical Engineering. It is best described as:",
-            options: [
-              "The trade of minerals and jewelry.",
-              "A science that drives innovation across aerospace, automotive, energy, and healthcare.",
-              "A purely historical field focused on Stone Age tools.",
-              "The study of non-metallic materials like plastics and wood.",
-            ],
-            correctAnswer: "A science that drives innovation across aerospace, automotive, energy, and healthcare.",
+            correctAnswer: "Would I do this in front of my mother?",
           },
         ];
 
         const ADMIN_PASSWORD = "admin123";
-        const TIME_PER_QUESTION = 22;
+        const TIME_PER_QUESTION = 20;
         const TAB_SWITCH_PENALTY = 0.5;
 
         useEffect(() => {
@@ -300,8 +241,8 @@
         };
 
         const handleStartQuiz = async () => {
-          if (!studentName.trim() || !indexNumber.trim()) {
-            alert("Please enter your name and index number");
+          if (!department || !studentName.trim() || !indexNumber.trim()) {
+            alert("Please select your department and enter your name and index number");
             return;
           }
 
@@ -312,7 +253,7 @@
             const GOOGLE_SCRIPT_URL =
               "https://script.google.com/macros/s/AKfycbzQ49ebOvpIuttMBXh7gkCRU857mK6T0Hr3v4yiEisPzHjwHdaPFyD744kWGVu81KymqA/exec";
 
-            const response = await fetch(GOOGLE_SCRIPT_URL);
+            const response = await fetch(`${GOOGLE_SCRIPT_URL}?department=${department}`);
             const data = await response.json();
 
             const alreadyTaken = data.some((record) => {
@@ -376,7 +317,7 @@
           const result = {
             studentName,
             indexNumber,
-            program: "Metallurgical Engineering",
+            department,
             rawScore,
             tabSwitches,
             tabPenalty,
@@ -420,17 +361,19 @@
         const AdminView = () => {
           const [results, setResults] = useState([]);
           const [loading, setLoading] = useState(true);
+          const [selectedDept, setSelectedDept] = useState("materials");
 
           useEffect(() => {
             loadResultsFromSheets();
-          }, []);
+          }, [selectedDept]);
 
           const loadResultsFromSheets = async () => {
+            setLoading(true);
             try {
               const GOOGLE_SCRIPT_URL =
                 "https://script.google.com/macros/s/AKfycbzQ49ebOvpIuttMBXh7gkCRU857mK6T0Hr3v4yiEisPzHjwHdaPFyD744kWGVu81KymqA/exec";
 
-              const response = await fetch(GOOGLE_SCRIPT_URL);
+              const response = await fetch(`${GOOGLE_SCRIPT_URL}?department=${selectedDept}`);
               const data = await response.json();
 
               setResults(data);
@@ -468,9 +411,17 @@
                 <div className="bg-white rounded-lg shadow-md p-6 mb-6">
                   <div className="flex justify-between items-center mb-4">
                     <h2 className="text-2xl font-bold">
-                      Admin Dashboard - METE 151 Quiz
+                      Admin Dashboard - CENG 291 Quiz
                     </h2>
                     <div className="flex gap-2">
+                      <select
+                        value={selectedDept}
+                        onChange={(e) => setSelectedDept(e.target.value)}
+                        className="px-4 py-2 border border-gray-300 rounded"
+                      >
+                        <option value="materials">Materials Engineering</option>
+                        <option value="metallurgical">Metallurgical Engineering</option>
+                      </select>
                       <button
                         onClick={() => loadResultsFromSheets()}
                         className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
@@ -489,9 +440,15 @@
                   {loading ? (
                     <p>Loading results from Google Sheets...</p>
                   ) : results.length === 0 ? (
-                    <p className="text-gray-500">No quiz submissions yet.</p>
+                    <p className="text-gray-500">No quiz submissions yet for {selectedDept === "materials" ? "Materials" : "Metallurgical"} Engineering.</p>
                   ) : (
                     <>
+                      <div className="mb-4">
+                        <p className="text-lg font-semibold text-gray-700">
+                          Viewing: {selectedDept === "materials" ? "Materials Engineering" : "Metallurgical Engineering"}
+                        </p>
+                      </div>
+
                       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                         <div className="bg-blue-50 rounded-lg p-4">
                           <p className="text-sm text-blue-600 font-semibold mb-1">
@@ -506,7 +463,7 @@
                             Highest Score
                           </p>
                           <p className="text-3xl font-bold text-green-700">
-                            {stats.highest}/15
+                            {stats.highest}/10
                           </p>
                         </div>
                         <div className="bg-yellow-50 rounded-lg p-4">
@@ -514,7 +471,7 @@
                             Average Score
                           </p>
                           <p className="text-3xl font-bold text-yellow-700">
-                            {stats.average}/15
+                            {stats.average}/10
                           </p>
                         </div>
                         <div className="bg-red-50 rounded-lg p-4">
@@ -522,7 +479,7 @@
                             Lowest Score
                           </p>
                           <p className="text-3xl font-bold text-red-700">
-                            {stats.lowest}/15
+                            {stats.lowest}/10
                           </p>
                         </div>
                       </div>
@@ -630,9 +587,9 @@
                   <div className="text-center mb-6">
                     <Lock className="mx-auto h-12 w-12 text-indigo-600 mb-3" />
                     <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                      METE 151 Quiz
+                      CENG 291 Quiz
                     </h1>
-                    <p className="text-gray-600">Metallurgical Engineering</p>
+                    <p className="text-gray-600">Engineering Ethics</p>
                   </div>
 
                   <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
@@ -641,7 +598,7 @@
                       <div className="text-sm text-yellow-700">
                         <p className="font-semibold mb-1">Quiz Rules:</p>
                         <ul className="list-disc list-inside space-y-1">
-                          <li>15 questions total</li>
+                          <li>10 questions total</li>
                           <li>20 seconds per question</li>
                           <li>Auto-advances when time expires</li>
                           <li>Tab switching: -0.5 points each</li>
@@ -653,6 +610,21 @@
                   </div>
 
                   <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Department
+                      </label>
+                      <select
+                        value={department}
+                        onChange={(e) => setDepartment(e.target.value)}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                      >
+                        <option value="">Select your department</option>
+                        <option value="materials">Materials Engineering</option>
+                        <option value="metallurgical">Metallurgical Engineering</option>
+                      </select>
+                    </div>
+
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">
                         Full Name
@@ -772,6 +744,9 @@
                   <div className="flex items-center space-x-4">
                     <span className="text-sm font-semibold text-gray-700">
                       {studentName} ({indexNumber})
+                    </span>
+                    <span className="text-xs px-2 py-1 bg-indigo-100 text-indigo-800 rounded">
+                      {department === "materials" ? "Materials" : "Metallurgical"} Eng.
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
